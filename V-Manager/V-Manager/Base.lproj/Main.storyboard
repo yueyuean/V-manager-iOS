@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RQe-o8-AFP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="Qsf-xP-90U">
+            <objects>
+                <viewController storyboardIdentifier="sid_main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1cn-JH-TaH" customClass="MainViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9hY-wZ-aL5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="cWJ-Pn-HkU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oXN-4G-QAu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mwo-yS-DIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1271" y="-986"/>
+        </scene>
+        <!--Main Navigation Controller-->
+        <scene sceneID="Vox-Lb-zW6">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="RQe-o8-AFP" customClass="MainNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rnj-lb-Bg0">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZbS-SC-olV">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="1cn-JH-TaH" kind="relationship" relationship="rootViewController" id="Qq2-TA-Ue0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Efu-If-bit" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2455" y="-986"/>
+        </scene>
+        <!--引导内容页-->
+        <scene sceneID="bWG-uO-AQA">
+            <objects>
+                <viewController storyboardIdentifier="sid_page" title="引导内容页" id="LFv-e9-KS6" customClass="CFPGuidePageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2iD-vC-yEY"/>
+                        <viewControllerLayoutGuide type="bottom" id="zbu-n6-8MH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nfI-4d-pQY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MM-引导页-2" translatesAutoresizingMaskIntoConstraints="NO" id="MOM-S1-2Nb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MOM-S1-2Nb" firstAttribute="top" secondItem="nfI-4d-pQY" secondAttribute="top" id="7qm-Ct-pIF"/>
+                            <constraint firstItem="MOM-S1-2Nb" firstAttribute="leading" secondItem="nfI-4d-pQY" secondAttribute="leading" id="Ofe-E3-wOh"/>
+                            <constraint firstItem="zbu-n6-8MH" firstAttribute="top" secondItem="MOM-S1-2Nb" secondAttribute="bottom" id="Whm-Mo-HMT"/>
+                            <constraint firstAttribute="trailing" secondItem="MOM-S1-2Nb" secondAttribute="trailing" id="zJx-ld-uiM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wB8-ul-seY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="MOM-S1-2Nb" id="6Am-V0-oXK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49l-Yg-UdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="545" y="1329"/>
+        </scene>
+        <!--引导页内容-->
+        <scene sceneID="Ttu-tj-DJz">
+            <objects>
+                <pageViewController storyboardIdentifier="sid_guideContent" autoresizesArchivedViewToFullSize="NO" title="引导页内容" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Gbj-xx-FuT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmN-K1-XrV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-227" y="1329"/>
+        </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="Zjq-Wd-kcV">
+            <objects>
+                <viewController storyboardIdentifier="sid_launch" id="mVV-19-dJs" customClass="CFPLaunchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L57-oQ-c0z"/>
+                        <viewControllerLayoutGuide type="bottom" id="bdQ-C4-H8C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lbv-iz-npV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="共通-启动页-背景" translatesAutoresizingMaskIntoConstraints="NO" id="6cP-3B-S3r">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="共通-启动页-标签" translatesAutoresizingMaskIntoConstraints="NO" id="EH9-0h-DC3">
+                                <rect key="frame" x="245" y="525" width="110" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="63e-ch-Shn"/>
+                                    <constraint firstAttribute="width" constant="110" id="Emu-Ik-cbY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="共通-启动页-标签-logo" translatesAutoresizingMaskIntoConstraints="NO" id="G7U-6c-lDM">
+                                <rect key="frame" x="205" y="210" width="190" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="Cgp-cE-Vvk"/>
+                                    <constraint firstAttribute="width" constant="190" id="oZ8-Nw-EZO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6cP-3B-S3r" secondAttribute="trailing" id="22E-TB-arW"/>
+                            <constraint firstItem="bdQ-C4-H8C" firstAttribute="top" secondItem="6cP-3B-S3r" secondAttribute="bottom" id="JLL-U1-YlH"/>
+                            <constraint firstItem="6cP-3B-S3r" firstAttribute="leading" secondItem="lbv-iz-npV" secondAttribute="leading" id="MZP-Gg-dT7"/>
+                            <constraint firstItem="bdQ-C4-H8C" firstAttribute="top" secondItem="EH9-0h-DC3" secondAttribute="bottom" constant="35" id="WHo-jW-uUJ"/>
+                            <constraint firstItem="EH9-0h-DC3" firstAttribute="centerX" secondItem="lbv-iz-npV" secondAttribute="centerX" id="mgO-rT-NmD"/>
+                            <constraint firstItem="G7U-6c-lDM" firstAttribute="top" secondItem="L57-oQ-c0z" secondAttribute="bottom" constant="190" id="pn5-In-Kfo"/>
+                            <constraint firstItem="6cP-3B-S3r" firstAttribute="top" secondItem="lbv-iz-npV" secondAttribute="top" id="qag-k0-Vl5"/>
+                            <constraint firstItem="G7U-6c-lDM" firstAttribute="centerX" secondItem="lbv-iz-npV" secondAttribute="centerX" id="uP9-7D-jy3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ry2-ch-rJq"/>
+                    </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="G7U-6c-lDM" id="3bt-rt-Hel"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sr9-Fy-Kbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-962" y="1329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MM-引导页-2" width="16" height="16"/>
+        <image name="共通-启动页-标签" width="16" height="16"/>
+        <image name="共通-启动页-标签-logo" width="16" height="16"/>
+        <image name="共通-启动页-背景" width="16" height="16"/>
+    </resources>
+</document>
